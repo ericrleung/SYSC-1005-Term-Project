@@ -1,6 +1,6 @@
 """ SYSC 1005 A Fall 2017.
 
-Filters for a photo-editing application.
+Filter functions for a photo-editing application.
 """
 
 from Cimpl import *
@@ -274,10 +274,10 @@ def blur(source):
             bottom_red, bottom_green, bottom_blue = get_color(source, x, y + 1)
             right_red, right_green, right_blue = get_color(source, x + 1, y)
             center_red, center_green, center_blue = get_color(source, x, y)
-            top_left_red, top_left_green, top_left_blue = get_color(source, x-1, y-1)
-            top_right_red, top_right_green, top_right_blue = get_color(source, x+1, y-1)
-            bottom_left_red, bottom_left_green, bottom_left_blue = get_color(source, x-1, y+1)
-            bottom_right_red, bottom_right_green, bottom_right_blue = get_color(source, x+1, y+1)
+            top_left_red, top_left_green, top_left_blue = get_color(source, x - 1, y - 1)
+            top_right_red, top_right_green, top_right_blue = get_color(source, x + 1, y - 1)
+            bottom_left_red, bottom_left_green, bottom_left_blue = get_color(source, x - 1, y + 1)
+            bottom_right_red, bottom_right_green, bottom_right_blue = get_color(source, x + 1, y + 1)
 
             # Average the red components of the five pixels
             new_red = (top_red + left_red + bottom_red +
